@@ -12,8 +12,7 @@ import NeuroNoiseBG from "../components/neuronoise-background";
 	<main>
 		<div class="group relative w-full min-h-dvh flex items-center justify-center">
 			<div class="absolute w-full h-dvh -z-10">
-				<NeuroNoiseBG
-					speed={1}
+				<NeuroNoiseBG					
 					client:load
 				/>
 			</div>
@@ -27,15 +26,16 @@ import NeuroNoiseBG from "../components/neuronoise-background";
 					<!-- <AvailableForWork className="py-4" /> -->
 					<div class="mb-2 sm:mb-4 flex items-center justify-between">
 						<div class="flex items-center gap-4">
-							<Link href="#">Book a call</Link>
-							<Link href="/projects" variant="secondary">View recent work</Link>
+							<!-- <Link href="/projects" variant="secondary">Works</Link>-->
+							<!-- <Link href="#" variant="secondary">Blogs</Link> -->
+							 <Link href="/about" variant="secondary">About</Link>
 						</div>
 
-						<Navigation client:load>
-							<Link href="/blog" variant="secondary">Blog</Link>
-							<Link href="/about" variant="secondary">About</Link>
-							<Link href="/contact" variant="secondary">Contact</Link>
-						</Navigation>
+						<!-- <Navigation client:load> -->
+							<!-- <Link href="/blog" variant="secondary">Blog</Link> -->
+							<!-- <Link href="/about" variant="secondary">About</Link> -->
+							<!-- <Link href="/contact" variant="secondary">Contact</Link> -->
+						<!-- </Navigation> -->
 					</div>
 				</div>
 			</div>
