@@ -4,3 +4,7 @@
 @theme inline {
 	--font-sans: var(--font-geist);
 }
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
