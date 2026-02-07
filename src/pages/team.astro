@@ -1,0 +1,131 @@
+---
+import { Image } from 'astro:assets';
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+
+// ============================================
+// ADD/EDIT TEAM MEMBERS HERE
+// ============================================
+
+const coOrganizers = [
+     {
+          name: "Xuelong Fu",
+          affiliation: "DPIN | University of Cambridge",
+          bio: "Very nice bio",
+          photo: "/src/assets/team/xuelong.jpg",
+          linkedin: "https://www.linkedin.com/in/xuelong-f-4203a3216/"
+     },
+     {
+          name: "Diego van der Mast",
+          affiliation: "DPIN | University of Amsterdam",
+          bio: "Very nice bio",
+          photo: "/src/assets/team/diego.jpg",
+          linkedin: "https://www.linkedin.com/in/diego-van-der-mast/"
+     },
+     {
+          name: "Ivo Andriessen",
+          affiliation: "THEA | Leiden University",
+          bio: "Very nice bio",
+          photo: "/src/assets/team/HPH_favicon.png",
+          linkedin: "https://linkedin.com/in/johndoe"
+     },
+     {
+          name: "Jeanne Bertoux",
+          affiliation: "THEA | Leiden University",
+          bio: "Very nice bio",
+          photo: "/src/assets/team/HPH_favicon.png",
+          linkedin: "https://linkedin.com/in/johndoe"
+     },
+     {
+          name: "Lumi Reichenbach",
+          affiliation: "THEA | Leiden University",
+          bio: "Very nice bio",
+          photo: "/src/assets/team/HPH_favicon.png",
+          linkedin: "https://linkedin.com/in/johndoe"
+     },
+];
+
+const coaches = [
+     {
+          name: "Mark Rutte",
+          affiliation: "NATO",
+          bio: "High school teacher with experience in running a country and coordinating international defense cooperation.",
+          photo: "/src/assets/team/HPH_favicon.png",
+          linkedin: "https://linkedin.com/in/alexjohnson"
+     }
+];
+
+// ============================================
+// NO NEED TO EDIT BELOW THIS LINE
+// ============================================
+---
+
+<InfoLayout>
+     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+          <H1>Team</H1>
+
+          <!-- Co-Organizers Section -->
+          <div class="mt-8 sm:mt-12">
+               <h2 class="text-2xl font-semibold text-zinc-100 mb-6">Co-Organizers</h2>
+               <ul class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                    {coOrganizers.map((member) => (
+                         <li class="flex flex-col">
+                              <img 
+                                   src={member.photo} 
+                                   alt={member.name} 
+                                   class="aspect-square object-cover rounded-lg shadow-lg mb-4" 
+                              />
+                              <div class="flex-1">
+                                   <h3 class="text-lg font-semibold text-zinc-100">{member.name}</h3>
+                                   <p class="text-sm text-zinc-300 mb-2">{member.affiliation}</p>
+                                   <p class="text-sm text-zinc-400 text-balance mb-3">{member.bio}</p>
+                                   <a 
+                                        href={member.linkedin} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        class="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                                   >
+                                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                        </svg>
+                                        LinkedIn
+                                   </a>
+                              </div>
+                         </li>
+                    ))}
+               </ul>
+          </div>
+
+          <!-- Coaches Section -->
+          <div class="mt-12 sm:mt-16">
+               <h2 class="text-2xl font-semibold text-zinc-100 mb-6">Coaches</h2>
+               <ul class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                    {coaches.map((member) => (
+                         <li class="flex flex-col">
+                              <img 
+                                   src={member.photo} 
+                                   alt={member.name} 
+                                   class="aspect-square object-cover rounded-lg shadow-lg mb-4" 
+                              />
+                              <div class="flex-1">
+                                   <h3 class="text-lg font-semibold text-zinc-100">{member.name}</h3>
+                                   <p class="text-sm text-zinc-300 mb-2">{member.affiliation}</p>
+                                   <p class="text-sm text-zinc-400 text-balance mb-3">{member.bio}</p>
+                                   <a 
+                                        href={member.linkedin} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        class="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                                   >
+                                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                        </svg>
+                                        LinkedIn
+                                   </a>
+                              </div>
+                         </li>
+                    ))}
+               </ul>
+          </div>
+     </div>
+</InfoLayout>
