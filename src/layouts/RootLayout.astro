@@ -6,8 +6,8 @@ import LoadingIndicator from "astro-loading-indicator/component"
 
 const { title, description } = Astro.props;
 
-const defaultTitle = "Nikola Tesla";
-const defaultDescription = "Nikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, and futurist who is best known for his contributions to the design of the modern alternating current (AC) electricity supply system.";
+const defaultTitle = "The Hague Policy Hackathon";
+const defaultDescription = "The Hague Policy Hackathon (THPH) is a newly founded hackathon event in The Hague, Netherlands. During this 2.5 days competition event, students and young professionals form multidisciplinary teams to develop data-informed policies and / or policy tools to tackle pressing societal issues relevant within the Dutch national government's policy landscape. The challenges are provided by  government and policy stakeholders. At the core, the event champions research and innovation at the interdisciplinary intersection between technology and policy. The event has already been succesfully held in Amsterdam and is inspired by the MIT Policy Hackathon, which is a similar competition held annually at the Massachusetts Institute of Technology.";
 ---
 
 <!doctype html>
@@ -20,7 +20,7 @@ const defaultDescription = "Nikola Tesla was a Serbian-American inventor, electr
 		<title>{title ?? defaultTitle}</title>
 		<meta name="description" content={description ?? defaultDescription} />
 
-		<meta property="og:url" content="https://nikola.fluidinterfaces.com/" />
+		<meta property="og:url" content="https://thehague.dpi.network" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={defaultTitle} />
 		<meta property="og:description" content={defaultDescription} />
@@ -28,8 +28,8 @@ const defaultDescription = "Nikola Tesla was a Serbian-American inventor, electr
 
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta property="twitter:domain" content="nikola.fluidinterfaces.com" />
-		<meta property="twitter:url" content="https://nikola.fluidinterfaces.com/" />
+		<meta property="twitter:domain" content="thehague.dpi.network" />
+		<meta property="twitter:url" content="https://thehague.dpi.network/" />
 		<meta name="twitter:title" content={defaultTitle} />
 		<meta name="twitter:description" content={defaultDescription} />
 		<meta name="twitter:image" content="/social-image.jpg" />
