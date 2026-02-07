@@ -3,6 +3,10 @@ import { Image } from 'astro:assets';
 import H1 from "../components/h1.astro";
 import InfoLayout from "../layouts/InfoLayout.astro";
 
+import xuelong_photo from "../assets/team/xuelong.jpg";
+import diego_photo from "../assets/team/diego.jpg";
+import favicon_photo from "../assets/team/HPH_favicon.png";
+
 // ============================================
 // ADD/EDIT TEAM MEMBERS HERE
 // ============================================
@@ -12,35 +16,35 @@ const coOrganizers = [
           name: "Xuelong Fu",
           affiliation: "DPIN | University of Cambridge",
           bio: "Very nice bio",
-          photo: "/src/assets/team/xuelong.jpg",
+          photo: xuelong_photo,
           linkedin: "https://www.linkedin.com/in/xuelong-f-4203a3216/"
      },
      {
           name: "Diego van der Mast",
           affiliation: "DPIN | University of Amsterdam",
           bio: "Very nice bio",
-          photo: "/src/assets/team/diego.jpg",
+          photo: diego_photo,
           linkedin: "https://www.linkedin.com/in/diego-van-der-mast/"
      },
      {
           name: "Ivo Andriessen",
           affiliation: "THEA | Leiden University",
           bio: "Very nice bio",
-          photo: "/src/assets/team/HPH_favicon.png",
+          photo: favicon_photo,
           linkedin: "https://linkedin.com/in/johndoe"
      },
      {
           name: "Jeanne Bertoux",
           affiliation: "THEA | Leiden University",
           bio: "Very nice bio",
-          photo: "/src/assets/team/HPH_favicon.png",
+          photo: favicon_photo,
           linkedin: "https://linkedin.com/in/johndoe"
      },
      {
           name: "Lumi Reichenbach",
           affiliation: "THEA | Leiden University",
           bio: "Very nice bio",
-          photo: "/src/assets/team/HPH_favicon.png",
+          photo: favicon_photo,
           linkedin: "https://linkedin.com/in/johndoe"
      },
 ];
@@ -50,7 +54,7 @@ const coaches = [
           name: "Mark Rutte",
           affiliation: "NATO",
           bio: "High school teacher with experience in running a country and coordinating international defense cooperation.",
-          photo: "/src/assets/team/HPH_favicon.png",
+          photo: favicon_photo,
           linkedin: "https://linkedin.com/in/alexjohnson"
      }
 ];
@@ -70,7 +74,7 @@ const coaches = [
                <ul class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                     {coOrganizers.map((member) => (
                          <li class="flex flex-col">
-                              <img 
+                              <Image 
                                    src={member.photo} 
                                    alt={member.name} 
                                    class="aspect-square object-cover rounded-lg shadow-lg mb-4" 
