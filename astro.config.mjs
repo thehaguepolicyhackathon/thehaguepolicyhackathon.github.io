@@ -9,22 +9,21 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
    site: 'https://thehaguepolicyhackathon.github.io',
-   base: '/thehaguepolicyhackathon.github.io',
-  vite: {
-    plugins: [tailwindcss()]
-  },
-  prefetch: true,
-  integrations: [react()],
-
-  experimental: {
-    clientPrerender: true,
-    fonts: [{
-      provider: fontProviders.google(),
-      name: "Geist",
-      cssVariable: "--font-geist",
-      fallbacks: ["Inter", "sans-serif"],
-    }]
-  }
-
+   prefetch: true,
+   integrations: [react()],
+   
+   experimental: {
+     clientPrerender: true,
+     fonts: [{
+       provider: fontProviders.google(),
+       name: "Geist",
+       cssVariable: "--font-geist",
+       fallbacks: ["Inter", "sans-serif"],
+      }]
+    },
+    
+    vite: {
+      plugins: [tailwindcss()]
+    },
   // adapter: vercel()
 });
