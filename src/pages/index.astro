@@ -4,6 +4,7 @@ import Link from "../components/link.astro";
 import Navigation from "../components/navigation";
 import RootLayout from "../layouts/RootLayout.astro";
 import AvailableForWork from "../components/available.astro";
+import hague_vid from "../assets/hague-vid.mp4";
 ---
 
 <RootLayout>
@@ -19,7 +20,7 @@ import AvailableForWork from "../components/available.astro";
 					loop 
 					playsinline
 				>
-					<source src="src/assets/hague-vid.mp4" type="video/mp4" />
+					<source src={hague_vid} type="video/mp4" />
 				</video>
 				
 				<!-- Option 2: Image background (comment out video above and uncomment this) -->
