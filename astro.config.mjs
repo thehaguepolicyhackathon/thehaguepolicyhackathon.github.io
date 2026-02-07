@@ -10,6 +10,7 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
    output: 'static',
    site: 'https://thehaguepolicyhackathon.github.io',
+   base: '/thehaguepolicyhackathon.github.io',
   vite: {
     plugins: [tailwindcss()]
   },
