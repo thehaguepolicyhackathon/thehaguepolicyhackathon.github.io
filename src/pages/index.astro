@@ -5,6 +5,7 @@ import Navigation from "../components/navigation";
 import RootLayout from "../layouts/RootLayout.astro";
 import AvailableForWork from "../components/available.astro";
 import hague_vid from "../assets/hague-vid.mp4";
+import hph_logo from "../assets/fluid-propulsion.jpg";
 ---
 
 <RootLayout>
@@ -40,8 +41,15 @@ import hague_vid from "../assets/hague-vid.mp4";
 			/>
 
 			<div class="p-4 sm:p-8 absolute w-full h-dvh flex flex-col justify-between z-10">
-				<div>
+				<!-- <div>
 					<H1 size="default"> The Hague <br /> Policy <br /> Hackathon </H1>
+				</div> -->
+				<div>
+					<img 
+						src="src/assets/HPH_logo_white.png"
+						alt="HPH logo"
+						class="w-[50vw] h-[50vw] max-w-96 max-h-96"
+					/>
 				</div>
 
 				<div>
@@ -51,8 +59,8 @@ import hague_vid from "../assets/hague-vid.mp4";
 							<Link href="https://luma.com/zdvikk0n">Register your interest!</Link>
 							<Link href="/about" variant="secondary">About</Link>
 							<Link href="/faq" variant="secondary">FAQ</Link>
-							<Link href="/contact" variant="secondary">Contact</Link>
 							<Link href="/team" variant="secondary">Team</Link>
+							<Link href="/contact" variant="secondary">Contact</Link>
 							<Link href="https://www.dpi.network/" variant="secondary">DPIN</Link>
 							<Link href="https://www.thehagueea.org/" variant="secondary">THEA</Link>
 						</div>
