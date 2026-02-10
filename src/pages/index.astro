@@ -1,5 +1,6 @@
 ---
 import H1 from "../components/h1.astro";
+import H2 from "../components/h2.astro";
 import Link from "../components/link.astro";
 import Navigation from "../components/navigation";
 import RootLayout from "../layouts/RootLayout.astro";
@@ -44,12 +45,14 @@ import hph_logo from "../assets/HPH_logo_white.png";
 				<!-- <div>
 					<H1 size="default"> The Hague <br /> Policy <br /> Hackathon </H1>
 				</div> -->
-				<div>
+				<div class="flex flex-col gap-2 items-start">
 					<img 
 						src={hph_logo.src}
 						alt="HPH logo"
-						class="w-[50vw] h-[50vw] max-w-96 max-h-96"
+						class="w-auto max-w-[210px] sm:max-w-[330px] md:max-w-[390px] h-auto -ml-5"
 					/>
+					
+					<H2 size="default"> 22-24 May 2026</H2>
 				</div>
 
 				<div>
