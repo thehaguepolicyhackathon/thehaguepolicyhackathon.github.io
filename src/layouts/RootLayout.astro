@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import { Font } from "astro:assets";
 import { ClientRouter } from 'astro:transitions';
 import LoadingIndicator from "astro-loading-indicator/component"
 
@@ -34,7 +33,6 @@ const defaultDescription = "The Hague Policy Hackathon (THPH) is a newly founded
 		<meta name="twitter:description" content={defaultDescription} />
 		<meta name="twitter:image" content="/social-image.jpg" />
 
-		<Font cssVariable="--font-geist" preload />
 		<ClientRouter />
 		<LoadingIndicator color="#f4f4f5" height="2px" />
 
